@@ -24,14 +24,17 @@ class MainActivity : AppCompatActivity() {
      */
     private fun rollDice() {
         // Create new Dice object with 6 sides and roll it
-        val dice = Dice(10)
+        val dice1 = Dice(10)
+        val dice2 = Dice(10)
 
         // Update the screen with the dice roll
-        val diceRoll = dice.roll()
-        val resultTextView: TextView =
-            findViewById(R.id.textView) // find the textView and get a handle of it (get a ref/pointer to it)
+        val dice1Roll = dice1.roll()
+        val dice2Roll = dice2.roll()
+        val resultTextView1: TextView = findViewById(R.id.textView) // find the textView and get a handle of it (get a ref/pointer to it)
+        val resultTextView2: TextView = findViewById(R.id.textView2)
 
-        resultTextView.text = diceRoll.toString()
+        resultTextView1.text = dice1Roll.toString()
+        resultTextView2.text = dice2Roll.toString()
     }
 }
 
